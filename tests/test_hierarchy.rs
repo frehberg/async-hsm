@@ -1,80 +1,9 @@
-# The asynchronous hierarchical state machine (HSM)
+#![allow(dead_code)]
 
-## Concept
-"Let the compiler do the optimization"
+pub use async_hsm;
 
-"Each state is an async function"
-
-"State-Transitions are sequences of async functions"
-
-"States of the same composite share state using an instance of 'Scope<Data>'"
-
-"Composites may be nested, forming an Hierarchical State Machine (HSM)"
-
-"Within a composite its states may be cyclic."
-
-"Async-await functions are managed within the context of the composite."
-
-"Exiting an async function will drop all its resources, incl other async-awaits."
-
-"Transiting to a new state is performed by a sequence of async-await functions"
-
-"The total code size is a few lines of code"
-
-"Parallel states are formed by multiple composites, bound by a async-await compsition."
- 
-## Features
-* Hierarchical State Compositions
-* Parallel States
-* Joining States
-* Asynchronous State Handler
-* Performant
-
-## License
-
-This work is dual-licensed under Apache 2.0 and GPL 2.0 (or any later version).
-You can choose between one of them if you use this work.
-
- SPDX-License-Identifier: Apache-2.0 OR MIT
-## Integration
-
-Put this in your Cargo.toml:
-```toml
-## Cargo.toml file
-[dependencies]
-async-hsm = "^0.1"
-```
-
-## Example
-The following state diagram (PlantUml syntax) can be encoded by the following Rust-code 
-```puml 
-
-@startuml res/hierarchy
-[*] --> App
-state App {
-[*] --> Menu
-state Menu {
-}
-
-state Play {
-  [*] --> Ping
-
-  Ping --> Ping : ping
-  Ping --> Pong : ping
-  Pong --> Pong : pong
-  Pong --> Ping : ping
-}
-Menu --> Play: play
-Play --> Menu: menu
-}
-App --> [*]: terminate
-@enduml
-```
-![](res/hierarchy.svg)
-
-See here the [ping pong state diagram](https://github.com/frehberg/async-hsm/res/hierarchy.svg)
-
-```edition2018
+#[cfg(test)]
+mod test_hierarchy {
     use async_std::prelude::*;
     use async_std::stream;
     use async_std::task;
@@ -169,4 +98,4 @@ See here the [ping pong state diagram](https://github.com/frehberg/async-hsm/res
         let result: Result<Score, AppError> = task::block_on(app.init(menu, start_score));
         assert_eq!(Ok(5), result);
     }
-```
+}

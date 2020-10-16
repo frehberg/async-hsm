@@ -1,0 +1,22 @@
+
+@startuml res/hierarchy
+[*] --> App
+state App {
+[*] --> Menu
+state Menu {
+}
+
+state Play {
+  [*] --> Ping
+
+  Ping --> Ping : ping
+  Ping --> Pong : ping
+  Pong --> Pong : pong
+  Pong --> Ping : ping
+}
+Menu --> Play: play
+Play --> Menu: menu
+}
+App --> [*]: terminate
+@enduml
+

@@ -1,0 +1,17 @@
+[package]
+name = "async-hsm"
+version = "0.1.0"
+authors = ["Frank Rehberger <frehberg@gmail.com>"]
+edition = "2018"
+description = "The lightweight asynchronous hierarchical state machine (HSM)."
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["hsm", "hierarchy", "state", "machine"]
+documentation = "https://docs.rs/async-hsm"
+homepage = "https://github.com/frehberg/async-hsm.git"
+repository = "https://github.com/frehberg/async-hsm.git"
+
+[dependencies]
+
+[dev-dependencies]
+async-std = "^1.6"
