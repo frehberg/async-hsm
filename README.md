@@ -21,18 +21,18 @@
 
 "The total code size is a few lines of code"
 
-"Parallel states are formed by multiple composites, bound by an async-await compsition."
+"Parallel states are formed by multiple composites, bound by an async-await composition."
  
 ## Features
 * Hierarchical State Compositions
-* Parallel States
-* Joining States
 * Asynchronous State Handler
 * Performant
+* Parallel State (example to be done)
+* Synchronization points between parallel composites (intended as next feature)
 
 ## License
 
-This work is dual-licensed under Apache 2.0 and GPL 2.0 (or any later version).
+This work is dual-licensed under Apache 2.0 OR MIT.
 You can choose between one of them if you use this work.
 
  SPDX-License-Identifier: Apache-2.0 OR MIT
@@ -42,7 +42,7 @@ Put this in your Cargo.toml:
 ```toml
 ## Cargo.toml file
 [dependencies]
-async-hsm = "^0.1"
+async-hsm = "^0.2"
 ```
 
 ## Example
