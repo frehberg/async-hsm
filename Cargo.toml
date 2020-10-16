@@ -1,6 +1,6 @@
 [package]
 name = "async-hsm"
-version = "0.2.0"
+version =  "0.2.0"
 authors = ["Frank Rehberger <frehberg@gmail.com>"]
 edition = "2018"
 description = "The lightweight asynchronous hierarchical state machine (HSM)."
