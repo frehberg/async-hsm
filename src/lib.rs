@@ -33,11 +33,11 @@
 //!```
 //!
 //!<div class="column"></div>
-//!<img src="https://github.com/frehberg/async-hsm/res/hierarchy.svg"  height="300" width="220"
-//!alt="[ping pong state diagram https://github.com/frehberg/async-hsm/res/hierarchy.svg]" />
+//!<img src="https://raw.githubusercontent.com/frehberg/async-hsm/main/res/hierarchy.svg"
+//!alt="[ping pong state diagram https://github.com/frehberg/async-hsm/blob/main/res/hierarchy.svg]" />
 //!</div>
 //!
-//!See here the [ping pong state diagram](https://github.com/frehberg/async-hsm/res/hierarchy.svg)
+//!See here the [ping pong state diagram](https://raw.githubusercontent.com/frehberg/async-hsm/main/res/hierarchy.svg)
 //!
 //!```rust
 //!     use async_std::prelude::*;

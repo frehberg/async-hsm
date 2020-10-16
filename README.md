@@ -7,7 +7,7 @@
 
 "State-Transitions are sequences of async functions"
 
-"States of the same composite share state using an instance of 'Scope<Data>'"
+"States of the same composite share state using an instance of 'Composite<Data>'"
 
 "Composites may be nested, forming an Hierarchical State Machine (HSM)"
 
@@ -21,7 +21,7 @@
 
 "The total code size is a few lines of code"
 
-"Parallel states are formed by multiple composites, bound by a async-await compsition."
+"Parallel states are formed by multiple composites, bound by an async-await compsition."
  
 ## Features
 * Hierarchical State Compositions
@@ -72,7 +72,7 @@ App --> [*]: terminate
 ```
 ![](res/hierarchy.svg)
 
-See here the [ping pong state diagram](https://github.com/frehberg/async-hsm/res/hierarchy.svg)
+See here the [ping pong state diagram](https://raw.githubusercontent.com/frehberg/async-hsm/main/res/hierarchy.svg)
 
 ```edition2018
     use async_std::prelude::*;

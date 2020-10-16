@@ -1,5 +1,6 @@
 
 @startuml res/hierarchy
+left to right direction
 [*] --> App
 state App {
 [*] --> Menu
